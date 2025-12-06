@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیتزا سرو</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!-- خطوط شناور پیتزا -->
+<div class="pizza-float pizza-1"><i class="fas fa-pizza-slice"></i></div>
+<div class="pizza-float pizza-2"><i class="fas fa-hamburger"></i></div>
+<div class="pizza-float pizza-3"><i class="fas fa-pizza-slice"></i></div>
+<div class="pizza-float pizza-4"><i class="fas fa-cheese"></i></div>
+<div class="pizza-float pizza-5"><i class="fas fa-pizza-slice"></i></div>
+
+<!-- موزیک پس‌زمینه -->
+<audio id="bgMusic" loop autoplay>
+    <source src="1.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-control" id="musicBtn" onclick="toggleMusic()"><i class="fas fa-volume-up"></i></button>
+
+<div class="container">
+    <header>
+        <h1><i class="fas fa-pizza-slice"></i> پیتزا سرو <i class="fas fa-pizza-slice"></i></h1>
+        <div class="subtitle">SARV PIZZA</div>
+        <div class="contact"><i class="fas fa-phone"></i> ۰۹۱۳۰۷۳۵۵۶</div>
+    </header>
+    <div class="special-note">
+        <strong>⭐ پیتزا بوقلمون موجوداست</strong>
+    </div>
+
+    <div class="menu-section">
+        <h2><i class="fas fa-pizza-slice"></i> پیتزا</h2>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="img/pizza1.png" alt="پیتزا مخصوص" class="menu-item-image">
+                <div class="item-name">مخصوص</div>
+                <h5>کالباس.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۹۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۴۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۲۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza2.png" alt="مخلوط" class="menu-item-image">
+                <div class="item-name">مخلوط</div>
+                <h5>کالباس.مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۴۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۷۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza3.png" alt="مکزیکی" class="menu-item-image">
+                <div class="item-name">مکزیکی</div>
+                <h5>کالباس.سوسیس.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۴۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza4.png" alt="پپرونی" class="menu-item-image">
+                <div class="item-name">پپرونی</div>
+                <h5>کالباس‌مخصوص.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۴۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza5.png" alt="گوشت(خالص)" class="menu-item-image">
+                <div class="item-name">گوشت(خالص)</div>
+                <h5>گوشت‌چرخ‌کرده.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۴۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۲۴۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۳۴۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۵۲۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza6.png" alt="گوشت(گوشت‌ومرغ‌ میکس)" class="menu-item-image">
+                <div class="item-name">گوشت(گوشت‌ومرغ‌ میکس)</div>
+                <h5>گوشت‌چرخ‌کرده.مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۲۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۹۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۸۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۴۵۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza7.png" alt="مرغ(ریش‌شده)" class="menu-item-image">
+                <div class="item-name">مرغ(ریش‌شده)</div>
+                <h5>مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۲۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۷۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۴۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza8.png" alt="مرغ(چرخ‌شده)" class="menu-item-image">
+                <div class="item-name">مرغ(چرخ‌شده)</div>
+                <h5>مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۰۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۲۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۵۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza9.png" alt="ویژه‌ سرو" class="menu-item-image">
+                <div class="item-name">ویژه‌ سرو</div>
+                <h5>مرغ.گوشت.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۳۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۲۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۳۰۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۴۷۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza10.png" alt="رست‌بیف گوساله" class="menu-item-image">
+                <div class="item-name">رست‌بیف گوساله</div>
+                <h5>مغزران‌گوساله.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۲۲۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۳۲۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۴۸۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۷۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza11.png" alt="چهار‌فصل" class="menu-item-image">
+                <div class="item-name">چهار‌فصل</div>
+                <h5>مرغ.گوشت.رست.کالباس</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">-</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۲۰۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۳۲۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۴۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza12.png" alt="بیکف" class="menu-item-image">
+                <div class="item-name">بیکف</div>
+                <h5>مارتا.ژامبون.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۰۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۳۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۳۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza13.png" alt="توپولوف" class="menu-item-image">
+                <div class="item-name">توپولوف</div>
+                <h5>سوسیس.هات‌داگ.ژامبون.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۵۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۲۰۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۹۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۴۵۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza14.png" alt="پروتين" class="menu-item-image">
+                <div class="item-name">پروتين</div>
+                <h5>رست‌گوساله.ریش‌مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۷۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۲۵۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۳۶۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۵۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza15.png" alt="بلغاری" class="menu-item-image">
+                <div class="item-name">بلغاری</div>
+                <h5>پپرونی.مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">مینی</span>
+                        <span class="price">۱۲۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">یک نفره</span>
+                        <span class="price">۱۸۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">دو نفره</span>
+                        <span class="price">۲۷۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">چند نفره</span>
+                        <span class="price">۴۳۰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h2><i class="fas fa-pizza-slice"></i>  اسنک</h2>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="img/pizza16.png" alt="کیکی" class="menu-item-image">
+                <div class="item-name">کیکی</div>
+                <h5>کالباس.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">کوچک</span>
+                        <span class="price">۶۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">متوسط</span>
+                        <span class="price">۱۳۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">بزرگ</span>
+                        <span class="price">۲۱۰</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="img/pizza17.png" alt="غول‌کیکی" class="menu-item-image">
+                <div class="item-name">غول‌کیکی</div>
+                <h5>مرغ.کالباس.پپرونی.ژامبون</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">کوچک</span>
+                        <span class="price">۱۱۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">متوسط</span>
+                        <span class="price">۱۹۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">بزرگ</span>
+                        <span class="price">۲۷۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/pizza16.png" alt="هات‌کیک" class="menu-item-image">
+                <div class="item-name">هات‌کیک</div>
+                <h5>گوشت‌یا‌مرغ.قارچ.پنیر</h5>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label">کوچک</span>
+                        <span class="price">۸۰</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">متوسط</span>
+                        <span class="price">۱۷۵</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="size-label">بزرگ</span>
+                        <span class="price">۲۴۵</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="menu-section">
+        <h2><i class="fas fa-hamburger item-icon"></i> ساندویچ</h2>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="img/b1.png" alt="همبرگر گوشت" class="menu-item-image">
+                <div class="item-name">همبرگر گوشت</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b2.png" alt="چیز برگر" class="menu-item-image">
+                <div class="item-name">چیزبرگر گوشت</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۰۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b3.png" alt="بانی برگر گوشت" class="menu-item-image">
+                <div class="item-name">بانی برگر گوشت</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۹۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b1.png" alt="بانی برگر گوشت" class="menu-item-image">
+                <div class="item-name">بانی چیز برگر گوشت</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۱۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b4.png" alt="همبرگر میکس" class="menu-item-image">
+                <div class="item-name">همبرگر میکس</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b5.png" alt="چیز برگر میکس" class="menu-item-image">
+                <div class="item-name">چیز برگر میکس</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۹۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b3.png" alt="بانی برگر میکس" class="menu-item-image">
+                <div class="item-name">بانی برگر میکس</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۸۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b4.png" alt="بانی چیز برگر میکس" class="menu-item-image">
+                <div class="item-name">بانی چیز برگر میکس</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۰۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b6.png" alt="همبرگر بیکن" class="menu-item-image">
+                <div class="item-name">همبرگر بیکن</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b7.png" alt="چیزبرگر بیکن" class="menu-item-image">
+                <div class="item-name">چیزبرگر بیکن</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b8.png" alt="بانی بکن" class="menu-item-image">
+                <div class="item-name">بانی بکن</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b9.png" alt="بانی چیزبکن" class="menu-item-image">
+                <div class="item-name">بانی چیزبکن</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۹۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b10.png" alt="دوبل برگر" class="menu-item-image">
+                <div class="item-name">دوبل برگر</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۱۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b7.png" alt="دوبل چیز برگر" class="menu-item-image">
+                <div class="item-name">دوبل چیز برگر</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۳۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b1.png" alt="سوسیس برگر" class="menu-item-image">
+                <div class="item-name">سوسیس برگر</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b11.png" alt="کوکتل برگر" class="menu-item-image">
+                <div class="item-name">کوکتل برگر</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b2.png" alt="مرغ" class="menu-item-image">
+                <div class="item-name">مرغ</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۸۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b8.png" alt="مرغ پنیری" class="menu-item-image">
+                <div class="item-name">مرغ پنیری</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۰۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b12.png" alt="بندری" class="menu-item-image">
+                <div class="item-name">بندری</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b13.png" alt="بندری پنیری" class="menu-item-image">
+                <div class="item-name">بندری پنیری</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۹۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/h1.png" alt="هات داگ" class="menu-item-image">
+                <div class="item-name">هات داگ</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۷۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/h2.png" alt="هات داگ پنیری" class="menu-item-image">
+                <div class="item-name">هات داگ پنیری</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۹۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/k1.png" alt="کالباس" class="menu-item-image">
+                <div class="item-name">کالباس</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/r1.png" alt="رست بیف" class="menu-item-image">
+                <div class="item-name">رست بیف</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۲۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/r2.png" alt="رست بیف پنیری" class="menu-item-image">
+                <div class="item-name">رست بیف پنیری</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۴۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/h1.png" alt="پروتین" class="menu-item-image">
+                <div class="item-name">پروتین</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۱۵</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/k2.png" alt="کوکتل" class="menu-item-image">
+                <div class="item-name">کوکتل</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b10.png" alt="دینامیت سرو" class="menu-item-image">
+                <div class="item-name">دینامیت سرو</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/b11.png" alt="بمب سرو" class="menu-item-image">
+                <div class="item-name">بمب سرو</div>
+                <div class="item-prices">
+                    <div class="price-box">
+                        <span class="size-label"></span>
+                        <span class="price">۱۶۰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let isPlaying = false;
+    const music = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+
+    // تنظیم ولوم پایین برای ملودی ملایم
+    music.volume = 0.3;
+
+    function toggleMusic() {
+        if (isPlaying) {
+            music.pause();
+            musicBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            isPlaying = false;
+        } else {
+            music.play();
+            musicBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            isPlaying = true;
+        }
+    }
+
+    // شروع خودکار موزیک با کلیک اول کاربر
+    document.body.addEventListener('click', function() {
+        if (!isPlaying) {
+            music.play();
+            musicBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            isPlaying = true;
+        }
+    }, { once: true });
+</script>
+</body>
+</html>
