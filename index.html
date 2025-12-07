@@ -26,13 +26,33 @@
     <header>
         <h1><i class="fas fa-pizza-slice"></i> پیتزا سرو <i class="fas fa-pizza-slice"></i></h1>
         <div class="subtitle">SARV PIZZA</div>
-        <div class="contact"><i class="fas fa-phone"></i> ۰۹۱۳۰۷۳۵۵۶</div>
+        <div class="contact"><i class="fas fa-phone"></i> ۰۹۱۳۹۰۷۳۵۵۶</div>
     </header>
+
+    <div class="nav-menu">
+        <a href="#pizza-section" class="nav-link">
+            <i class="fas fa-pizza-slice"></i>
+            پیتزا
+        </a>
+        <a href="#snack-section" class="nav-link">
+            <i class="fas fa-cookie-bite"></i>
+            اسنک
+        </a>
+        <a href="#sandwich-section" class="nav-link">
+            <i class="fas fa-hamburger"></i>
+            ساندویچ
+        </a>
+    </div>
+
     <div class="special-note">
         <strong>⭐ پیتزا بوقلمون موجوداست</strong>
     </div>
 
-    <div class="menu-section">
+    <div class="special-note" style="background: rgba(33, 150, 243, 0.2); border-right: 4px solid #2196F3;">
+        <strong>* توجه: تصاویر نمایش داده شده در این منو جنبه نمایشی دارند و ممکن است با محصول نهایی تفاوت داشته باشند. برای مشاهده محصولات واقعی از ما بازدید فرمایید.</strong>
+    </div>
+
+    <div class="menu-section" id="pizza-section">
         <h2><i class="fas fa-pizza-slice"></i> پیتزا</h2>
 
         <div class="menu-grid">
@@ -398,7 +418,7 @@
         </div>
     </div>
 
-    <div class="menu-section">
+    <div class="menu-section" id="snack-section">
         <h2><i class="fas fa-pizza-slice"></i>  اسنک</h2>
 
         <div class="menu-grid">
@@ -465,7 +485,7 @@
 
     </div>
 
-    <div class="menu-section">
+    <div class="menu-section" id="sandwich-section">
         <h2><i class="fas fa-hamburger item-icon"></i> ساندویچ</h2>
 
         <div class="menu-grid">
@@ -789,6 +809,24 @@
             </div>
         </div>
     </div>
+    <!-- بخش لوکیشن و نقشه -->
+    <div class="location-section">
+        <div class="location-info">
+            <h2><i class="fas fa-map-marker-alt"></i> آدرس و موقعیت ما</h2>
+            <div class="address">
+                <i class="fas fa-location-dot"></i>
+                <span class="address-text">کوشک بلوار امام بعد از پست بانک جنب مطب دکتر براهمی</span>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe
+                    src="https://www.google.com/maps?q=32.63953,51.49995&hl=fa&z=16&output=embed"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -819,6 +857,21 @@
             isPlaying = true;
         }
     }, { once: true });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 </script>
 </body>
 </html>
